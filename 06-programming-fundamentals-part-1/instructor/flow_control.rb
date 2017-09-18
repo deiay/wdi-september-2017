@@ -5,16 +5,14 @@
 # (optionally) otherwise
 #   then do something else
 
+count = 9
 
+if count > 10
+  puts "count is greater than ten"
+elsif count < 10
+  puts "count is less than ten"
+else
+  puts "count is equal to ten"
+end
 
-
-
-# Looping
-
-# for loop
-# while loop
-# until loop
-
-
-
-# Iteration
+puts "End of program."
