@@ -7,6 +7,8 @@
 
 count = 9
 
+number_of_cars = 10
+
 if count > 10
   puts "count is greater than ten"
 elsif count < 10
@@ -14,5 +16,8 @@ elsif count < 10
 else
   puts "count is equal to ten"
 end
+
+
+puts "count is greater than ten" unless count <= 10
 
 puts "End of program."
