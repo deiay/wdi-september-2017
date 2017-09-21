@@ -9,5 +9,6 @@ So far we've talk about how the fundamental build blocks of programming work, in
   * abstraction
   * algorithms
 
+* How to research technical problems
 * Problem solving thought process
 

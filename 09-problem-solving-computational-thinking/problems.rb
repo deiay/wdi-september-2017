@@ -1,14 +1,14 @@
 # Problem: Get the total sum of a list of numbers
 # 1 2 5 11 1
-#
-#  list_of_numbers = [1,2,5,11,1]
-#  sum = 0
-#  list_of_numbers.each do |num|
-#   sum += num
-#  end
-#
-#
-# puts sum
+
+  list_of_numbers = [1,2,5,11,1]
+  sum = 0
+  list_of_numbers.each do |num|
+   sum += num
+  end
+
+
+ puts sum
 
 
 # Problem: Pig Latin
