@@ -1,11 +1,83 @@
 # Problem: Get the total sum of a list of numbers
 # 1 2 5 11 1
+#
+#  list_of_numbers = [1,2,5,11,1]
+#  sum = 0
+#  list_of_numbers.each do |num|
+#   sum += num
+#  end
+#
+#
+# puts sum
+
 
 # Problem: Pig Latin
 # Pig Latin
-# "apple" => "appleay"
-# "plum" => "umplay"
-# "squeeze" => "eezesquay"
+ # "apple" => "appleay"
+ # "plum" => "umplay"
+ # grape => apegray
+ # Richard => ichardRay
+ # Natalie => atalieNay
+ # "squeeze" => "eezesquay"
+
+ # if it starts witha vowel add "ay" to the end
+ # if it starts with consonants, move them to the end and then add "ay"
+ # if there is a "qu", you must move the u to the end along with the q
+
+# - method to tell us whether a letter is a vowel or not true/false
+def vowel?(letter)
+ vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+ return vowels.include?(letter)
+end
+
+ #- method to check for that pesky "qu" situation
+
+def pig_latin(word)
+ # - iterate through each character in the word and check if it's a vowel
+
+ consonant_counter = 0
+
+ first_letter = word.chars.first
+ if vowel?(first_letter)
+   word << "ay"
+ else
+
+   word.each_char do |character|
+
+     if vowel?(character)
+      break
+     else
+      consonant_counter += 1
+     end
+   end
+
+   # move the right number of consonants to the end
+   word_array = word.chars
+   rotated_chars = word_array.rotate(consonant_counter)
+   word = rotated_chars.join
+
+   word << "ay"
+ end
+
+ end
+
+
+puts pig_latin("apple")
+puts pig_latin("plum")
+puts pig_latin("Richard")
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Problem: Find frequency of the letter "s" in a string
 # Problem: Find frequency of the letter "a" in a string
