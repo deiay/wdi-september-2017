@@ -157,8 +157,8 @@ violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date
 violation_stats = {}
 # GOAL:
 # violation_stats = {
-#                     "Vegetation": {count: 10, total_owed: 125.0 },
-#                     "Unsanitary Conditions": {count: 2, total_owed: 50.0 },
+#                     "Vegetation": {count: 10, total_owed: 125.0, earliest_violation: "2012-01-01", latest_violation: "2012-12-31" },
+#                     "Unsanitary Conditions": {count: 2, total_owed: 50.0, earliest_violation: "2012-02-03", latest_violation: "2012-11-30" },
 #                    ...
 #                   }
 
@@ -184,4 +184,27 @@ violations.each do |current_violation|
   else
     category_stats[:total_owed] += current_violation[:money_owed]
   end
+end
+
+violations.each do |current_violation|
+  current_category_name = current_violation[:violation_category]
+  current_date = current_violation[:date]
+  category_stats = violation_stats[current_category_name]
+
+  if category_stats[:earliest_violation] > current_date
+    category_stats[:earliest_violation] = current_date
+  end
+
+  if category_stats[:latest_violation] < current_date
+    category_stats[:latest_violation] = current_date
+  end
+end
+
+violation_stats.each do |category, stats|
+  count = stats[:count]
+  fines = stats[:total_owed]
+  earliest = stats[:earliest_violation]
+  latest = stats[:latest_violation]
+  puts "There are #{count} violations in the category #{category} for a total of #{fines} in fines."
+  puts "The earliest violation is #{earliest} and the latest violation is #{latest}"
 end
