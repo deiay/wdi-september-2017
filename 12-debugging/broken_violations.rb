@@ -185,3 +185,9 @@ violations.each do |current_violation|
     category_stats[:total_owed] += current_violation[:money_owed]
   end
 end
+
+violation_stats.each do |category, stats|
+  count = stats[:count]
+  fines = stats[:total_owed]
+  puts "There are #{count} violations in the category #{category} for a total of #{fines} in fines."
+end

@@ -157,8 +157,8 @@ violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date
 violation_stats = {}
 # GOAL:
 # violation_stats = {
-#                     "Vegetation": {count: 10, total_owed: 125.0, earliest_violation: "2012-01-01", latest_violation: "2012-12-31" },
-#                     "Unsanitary Conditions": {count: 2, total_owed: 50.0, earliest_violation: "2012-02-03", latest_violation: "2012-11-30" },
+#                     "Vegetation": {ount: 10, earliest_violation: "2012-01-01", latest_violation: "2012-12-31" },
+#                     "Unsanitary Conditions": {count: 2, earliest_violation: "2012-02-03", latest_violation: "2012-11-30" },
 #                    ...
 #                   }
 
@@ -170,19 +170,6 @@ violations.each do |violation_hash|
 
   else # it's not in the hash and we need to add it with the val 1
     violation_stats[current_violation_category] = {count: 1}
-  end
-end
-
-# Find the total money owed for each violation category
-
-violations.each do |current_violation|
-  current_category_name = current_violation[:violation_category]
-  category_stats = violation_stats[current_category_name]
-
-  if category_stats[:total_owed] == nil
-    category_stats[:total_owed] = {total_owed: current_violation[:money_owed]}
-  else
-    category_stats[:total_owed] += current_violation[:money_owed]
   end
 end
 
@@ -202,9 +189,7 @@ end
 
 violation_stats.each do |category, stats|
   count = stats[:count]
-  fines = stats[:total_owed]
   earliest = stats[:earliest_violation]
   latest = stats[:latest_violation]
-  puts "There are #{count} violations in the category #{category} for a total of #{fines} in fines."
   puts "The earliest violation is #{earliest} and the latest violation is #{latest}"
 end
