@@ -7,7 +7,7 @@ At least half of your time as a developer is going to be spent debugging or test
 1. What's a bug?
 2. Good habits for avoiding bugs
 3. Debugging techniques
-4. Using a debugger (pry) 
+4. Using a debugger (pry)
 5. Common error messages
 
 ## What is a bug? (less than 5 minutes)
@@ -45,7 +45,7 @@ rbenv rehash
 - What is a debugger? (less than 5 mins)
   - [Sidenote: What is a gem?](https://rubygems.org/) (Less than 5 mins)
 
-Demo how to set pry breakpoints in order to fix broken code in `rover.rb`. (10 mins)
+Demo how to set pry breakpoints in order to fix broken code in `paperboy.rb`. (10 mins)
 
 Interactively debug broken code in `game.rb` and `player.rb`. (20 mins)
 
