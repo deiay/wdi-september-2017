@@ -5,6 +5,8 @@ class Car
   def initialize(owner)
     @colour = @@default_colour
     @owner  = owner
+
+    @broken = false
   end
 
   def self.default_colour
@@ -19,8 +21,17 @@ class Car
     @colour
   end
 
+  def broken
+    @broken
+  end
+
   def colour=(colour)
     @colour = colour
+  end
+
+  def crash(another_car = nil)
+    @broken = true
+    another_car.crash if another_car
   end
 
 end
