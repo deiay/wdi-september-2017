@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'menu_item'
 
 get '/' do
   redirect to('/menu_items')
@@ -17,25 +18,14 @@ get '/legalese' do
 end
 
 get '/menu_items' do
-  @menu_items = {
-    1 => 'BBQ Ribs',
-    2 => 'Avocado Sushi',
-    3 => 'Gluten-Free Cookies',
-    4 => 'Nitrogen Chocolate Ice Cream'
-  }
+  # .all is okay for small numbers of items, bad for large number of items
+  @menu_items = MenuItem.all
 
   erb :menu_items
 end
 
 get '/menu_items/:id' do
-  @menu_items = {
-    1 => 'BBQ Ribs',
-    2 => 'Avocado Sushi',
-    3 => 'Gluten-Free Cookies',
-    4 => 'Nitrogen Chocolate Ice Cream'
-  }
-
-  @menu_item_id = params[:id].to_i
+  @menu_item = MenuItem.find(params[:id].to_i)
 
   erb :menu_item
 end
