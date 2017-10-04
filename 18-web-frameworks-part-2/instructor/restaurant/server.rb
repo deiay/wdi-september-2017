@@ -26,3 +26,19 @@ get '/menu_items' do
 
   erb :menu_items
 end
+
+get '/menu_items/1' do
+  erb :menu_item_1
+end
+
+get '/menu_items/2' do
+  erb :menu_item_2
+end
+
+get '/menu_items/3' do
+  erb :menu_item_3
+end
+
+get '/menu_items/4' do
+  erb :menu_item_4
+end
