@@ -8,8 +8,20 @@
 <h2>New Film</h2>
 <form class="new-film" action="/films" method="post">
   <div>
+    <label for="film-title">Title:</label>
+    <input id="film-title" type="text" name="title" value="" placeholder="e.g. Moonlight">
     <!-- input type: text -->
   </div>
+<!-- <input type="date" name="name" value="">
+<input type="time" name="name" value="">
+<input type="color" name="name" value="">
+<input type="number" name="name" value="">
+<input type="email" name="name" value="">
+<input type="tel" name="name" value="">
+<input type="url" name="name" value="">
+<input type="search" name="name" value="">
+<input type="range" name="name" value="">
+<input type="button" name="name" value=""> -->
 
   <div>
     <!-- input types: date / time / email / tel / url / color / range / number / search -->
@@ -17,30 +29,73 @@
 
   <div>
     <!-- textarea -->
+    <label for="film-description">Description:</label>
+    <textarea id="film-description" name="description"></textarea>
   </div>
 
   <div>
   <!-- input radio -->
+  <fieldset>
+    <legend>Rating</legend>
+
+    <label for="rating-1">
+      <span> 1 Star </span>
+      <input id="rating-1" type="radio" name="rating" value="1">
+    </label>
+
+    <label for="rating-2">
+      <span> 2 Stars </span>
+      <input id="rating-2" type="radio" name="rating" value="2">
+    </label>
+
+    <label for="rating-3">
+      <span> 3 Stars </span>
+      <!-- checked="true" to preselect -->
+      <input id="rating-3" type="radio" name="rating" value="3">
+    </label>
+  </fieldset>
+
   </div>
 
   <div>
   <!-- input checkbox -->
+  <label for="film-available">
+    <span>In library?</span>
+      <!-- checked="true" to preselect -->
+    <input id="film-available" type="checkbox" name="available" value="1">
+  </label>
   </div>
 
 
   <div>
     <!-- select / option -->
+    <label for="film-country">Country:</label>
+    <select id="film-country" name="country">
+      <!-- selected="true" to preselect -->
+      <option value="">Please select a country</option>
+      <option value="CA">Canada</option>
+      <option value="US">United States</option>
+      <option value="GB">United Kingdom</option>
+      <option value="JP">Japan</option>
+    </select>
   </div>
 
 
   <div>
     <!-- file -->
+    <!-- <input type="file" name="name" value=""> -->
   </div>
 
   <!-- hidden -->
+  <!-- <input type="hidden" name="loyalty-points" value="dsfdslf39u498374"> -->
 
   <div>
     <!-- input submit / button -->
+    <!-- <input type="submit" name="" value="Create film!"> -->
+    <button type="submit" name="button">
+      <span>Create a Film!</span>
+      <img src="http://placebear.com/100/100" alt="a bear">
+    </button>
   </div>
 
 </form>
