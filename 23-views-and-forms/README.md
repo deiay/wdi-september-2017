@@ -78,14 +78,6 @@ Diagram: https://srikantmahapatra.files.wordpress.com/2013/11/mvc1.png
 - `Object.new(params)` won't work! This is insecure.
 
 
-## Strong parameters - 10 minutes
-
-- Forbids doing mass-assignment on a model from the params hash (i.e. `Film.create(params[:film])`)
-- Instead, we have to whitelist the parameters that are allowed to be assigned to our model
-  - This way malicious users can't add whatever they want to your model
-- Full details can be found in the [strong_parameters gem page](https://github.com/rails/strong_parameters)
-
-
 ### Further Reading
 
 - [Rails Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
