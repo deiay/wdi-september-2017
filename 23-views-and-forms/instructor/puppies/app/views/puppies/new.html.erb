@@ -1,0 +1,47 @@
+
+<h1>Create Puppy</h1>
+
+<%= render 'puppy_form', { puppy: @puppy } %>
+
+<!--
+<%= form_for @puppy do |helper| %>
+
+  <p>
+    <%= helper.label :name %>
+    <%= helper.text_field :name %>
+  </p>
+
+  <p>
+    <%= helper.label :breed %>
+    <%= helper.text_field :breed %>
+  </p>
+
+  <p>
+    <%= helper.label :age %>
+    <%= helper.number_field :age %>
+  </p>
+
+  <p>
+    <%= helper.submit %>
+  </p>
+
+<% end %>
+
+<hr />
+
+<%= form_tag(puppies_path) do %>
+  <p>
+    Name: <%= text_field_tag :name %>
+  </p>
+
+  <p>
+    Breed: <%= text_field_tag :breed %>
+  </p>
+
+  <p>
+    Age: <%= number_field_tag :age %>
+  </p>
+
+  <%= submit_tag %>
+
+<% end %> -->

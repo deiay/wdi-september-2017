@@ -1,0 +1,22 @@
+<%= form_for puppy do |helper| %>
+
+  <p>
+    <%= helper.label :name %>
+    <%= helper.text_field :name %>
+  </p>
+
+  <p>
+    <%= helper.label :breed %>
+    <%= helper.text_field :breed %>
+  </p>
+
+  <p>
+    <%= helper.label :age %>
+    <%= helper.number_field :age %>
+  </p>
+
+  <p>
+    <%= helper.submit %>
+  </p>
+
+<% end %>

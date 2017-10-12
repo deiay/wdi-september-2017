@@ -1,0 +1,16 @@
+
+PUPPIES
+
+<%= @puppies %>
+
+<p>
+  <%= link_to 'Create new puppy', new_puppy_path %>
+</p>
+
+<% @puppies.each do |current_puppy| %>
+
+<!-- render certain file with puppy -->
+
+  <%= render 'one_puppy', { puppy: current_puppy, person: 'Joe' } %>
+
+<% end %>
