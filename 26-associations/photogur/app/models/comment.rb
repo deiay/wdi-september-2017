@@ -5,4 +5,7 @@ class Comment < ApplicationRecord
   # some_comment.picture=(other_pic)
   # some_comment.create_picture
   # some_comment.build_picture
+
+  # we never use this but it's possible:
+  has_many :tags, through: :picture
 end
