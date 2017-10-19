@@ -10,14 +10,14 @@
 
   <body>
     <%# Use _path in views %>
-    <% if session[:user_id] %>
+    <% if current_user %>
       <p>
         <%= link_to 'Home', root_url %>
         |
         <%= link_to 'Logout', sessions_path, method: :delete %>
       </p>
 
-      <p>Hello User <%= session[:user_id] %> Your balance is: $X</p>
+      <p>Hello <%= current_user.email %>, Your balance is: $X</p>
     <% else %>
       <p>
         <%= link_to 'Home', root_url %>
