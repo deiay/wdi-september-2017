@@ -2,6 +2,19 @@
 <p><%= link_to 'New User', new_users_path %></p>
 <p><%= link_to 'Login', new_sessions_path %></p>
 
+<%
+  def user_is_logged_in
+    false
+  end
+%>
+
+<% if user_is_logged_in %>
+  <p><%= link_to 'Logout', sessions_path %></p>
+  <p>Your balance is: $X</p>
+<% else %>
+  Please login to see your balance.
+<% end %>
+
 <h1>Rainforest Homepage</h1>
 
 <p>All our products are listed here</p>
