@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
   var container = document.querySelector('#container');
   var boxMaker = document.querySelector('#box-maker');
 
+  container.addEventListener('click', function(e) {
+    if ( e.target.classList.contains('circle') ) {
+      e.target.remove();
+    }
+  });
+
   boxMaker.addEventListener('click', function() {
       var x = Math.ceil(Math.random() * 400),
           y = Math.ceil(Math.random() * 200),
@@ -21,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
       circle.style.left = x + 'px';
       circle.style.backgroundColor = colors[c];
       circle.innerHTML = count++;
+
+      // circle.addEventListener('click', function(e) {
+      //   this.remove();
+      // });
 
       container.append(circle);
 
