@@ -191,4 +191,63 @@ siblings = {
 
 #Excercise 8
 
+def show_list(list)
+  number_of_items = list.length
+  puts "There are #{number_of_items} items on your list:"
+  list.each do |item|
+    puts "* #{item}"
+  end
+end
+
+def includes_item?(list,search_word)
+  if list.include? search_word
+    puts "Your list includes #{search_word}"
+  else
+    puts "#{search_word} aren't on your list, do you want to add it? (Yes/No)"
+    add_to_list = gets.chomp
+    if add_to_list == "Yes"
+      list << search_word
+      puts "I've added #{search_word} to your list!"
+    else
+      puts "Okay I won't add #{search_word} to your list."
+    end
+  end
+end
+
+def sort_list(list)
+  sorted = list.sort
+  puts "Your list sorted in alphabetical order:"
+  puts sorted
+  puts "\nWould you like me to save this?"
+  answer = gets.chomp
+  if answer == "Yes"
+   list = sorted
+   puts "I've saved this now. Your new list is:"
+   puts list
+  else puts "Okay, I'll leave your list as is. Your list is"
+      puts list
+  end
+end
+
+
+
 grocery_list = ["bagels","salami","eggs","cheese","cranberry juice"]
+grocery_list << "rice"
+
+#show_list(grocery_list)
+#includes_item?(grocery_list,"bananas")
+#show_list(grocery_list)
+#puts "The second item in your list is #{grocery_list[1]}"
+
+sort_list(grocery_list)
+
+grocery_store = ["bagels","eggs","cheese","cranberry juice"]
+
+grocery_list.each_with_index do |list_item,index|
+  if !grocery_store.include? list_item
+    grocery_list.delete_at(index)
+    puts "I couldn't find #{list_item} in the store, I've removed it from your list"
+  end
+end
+
+puts grocery_list
