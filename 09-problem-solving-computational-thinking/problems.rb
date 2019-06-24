@@ -1,6 +1,18 @@
 # Problem: Get the total sum of a list of numbers
 # 1 2 5 11 1
 
+# arrays
+# set couter variables
+#loop iteratte
+  #add the next number to that couter variable
+
+# list_of_numbers = [1,2,5,11,1]
+# set sum variable to 0
+# loop each object in list_of_numbers
+# add current number to the sum variable
+
+
+
   list_of_numbers = [1,2,5,11,1]
   sum = 0
   list_of_numbers.each do |num|
@@ -24,6 +36,25 @@
  # if it starts with consonants, move them to the end and then add "ay"
  # if there is a "qu", you must move the u to the end along with the q
 
+Function to convert a word to Pig latin
+- array to list vowels
+- method to check for letters that need to be moved the the back of the word
+  - If letter is a vowel then stop looking and add ay to the end of the string
+  - else move consonant to the end of the string
+  - method to check for qu combincation
+    - consonant is q, then move then next two characters to the end of the string
+
+vowels = ['A','E','I','O','U','a','e','i','o','u']
+
+word.each do |letter|
+  if vowels
+
+
+
+
+
+
+
 # - method to tell us whether a letter is a vowel or not true/false
 def vowel?(letter)
  vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
@@ -32,7 +63,7 @@ def vowel?(letter)
 end
 
  #- method to check for that pesky "qu" situation
-
+ 
 def pig_latin(word)
  # - iterate through each character in the word and check if it's a vowel
 
@@ -241,4 +272,3 @@ violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date
 
 
 # Problem: Find the total money owed for each violation category
-
