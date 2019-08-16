@@ -9,7 +9,7 @@ get '/hello' do
   # send_file('views/hello.erb')
 
   @current_time = Time.now
-  
+
   @todo_list = [
     'Water the plants',
     'Go to the gym',

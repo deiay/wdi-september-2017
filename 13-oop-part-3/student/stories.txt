@@ -1,0 +1,28 @@
+class Contact
+
+1. As a user, I should be able to see a list of contacts, so that I can choose one to contact. (MUST HAVE)
+2. As a user, I should be able to add a new contact, so that... (MUST HAVE)
+3. As a user, I should be able to add a phone number to a contacts (MUST HAVE)
+4. As a user, I should be able to select to select a contact (MUST HAVE)
+
+As a user, I should be able to add an email to a contacts (SHOULD HAVE)
+As a user, I should be able to add notes to a contacts (SHOULD HAVE)
+As a user, I should be able to remove a contacts (SHOULD HAVE)
+As a user, I should be able to block a contact (SHOULD HAVE)
+
+As a user, I should be able to merge two contacts (COULD HAVE)
+As a user, I should be able to search for a contact (COULD HAVE)
+As a user, I should be able to add a photo to a contact (COULD HAVE)
+As a user, I should be able to add an address to contact (SHOULD HAVE)
+As a user, I should be able to add a birthday (COULD HAVE)
+As a user, I should be able to organize contacts into groups (COULD HAVE)
+As a user, I should be able to share my contact information with someone else (COULD HAVE)
+As a user, I should be able to add history to a contact (COULD HAVE)
+As a user, I should be able to store linkedin into to a contact (COULD HAVE)
+As a user I should be able to sort my contacts by name (COULD HAVE)
+
+As a user, I should be able to send a birthday greeting to a contact  (WON'T HAVE)
+As a user, I should be able to export contacts (WON'T HAVE)
+As a user, I should be able to import contacts (WON'T HAVE)
+As a user, I should be able to exchange money with contacts (WON'T HAVE)
+As a user, I should be able to 'poke' a contact (WON'T HAVE)

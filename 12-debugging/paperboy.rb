@@ -28,12 +28,13 @@ class Paperboy
 
   def calculate_pay(houses)
     pay = houses * 0.25
-
     if houses < quota
       pay -= 2
     elsif houses > quota
       pay += 0.25 * (houses - quota)
     end
+
+    binding.pry
 
     return pay
   end
@@ -45,4 +46,3 @@ me.deliver(101,160)
 puts me.report
 me.deliver(1,75)
 puts me.report
-

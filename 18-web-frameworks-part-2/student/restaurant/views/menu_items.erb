@@ -1,0 +1,7 @@
+<ul>
+  <% @menu_items.each do |menu_item,i| %>
+  <li>
+    <a href="/menu_items/<%= menu_item.id %>"><%= menu_item.name %></a>
+  </li>
+  <% end %>
+</ul>

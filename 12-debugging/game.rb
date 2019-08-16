@@ -17,9 +17,9 @@ class Game
     puts "It's Adventure Time!"
     print "How many people are adventuring? "
     number_of_players = gets.chomp.to_i
-
     game = Game.new(number_of_players)
     game.turn
+
   end
 
   def turn
