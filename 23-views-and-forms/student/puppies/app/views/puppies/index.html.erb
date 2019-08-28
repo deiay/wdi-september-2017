@@ -1,0 +1,7 @@
+<h1>Puppies</h1>
+
+<p> <%= link_to 'Create new puppy', new_puppy_path %> </p>
+
+<% @puppies.each do |current_puppy| %>
+  <%= render 'one_puppy', { puppy: current_puppy, link_title: true} %>
+<% end %>

@@ -1,0 +1,10 @@
+  <h1>Our Rides are fun</h1>
+<pre>
+  <% @rides.each do |ride| %>
+  <h6> <%= ride.id %> </h6>
+  <h2> <%= link_to(ride.name,ride_path(ride)) %> </h2>
+  <p> <%= ride.description %>
+  <br/>
+  <%= ride.price %> </p>
+  <% end %>
+</pre>

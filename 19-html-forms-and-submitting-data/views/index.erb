@@ -1,7 +1,7 @@
 <h2>Film Library</h2>
 <ul>
   <% Film.all.each do |film| %>
-    <li><%= film.title %></li>
+    <a href="films/<%= film.id %>"><li><%= film.title %></li></a>
   <% end %>
 </ul>
 
@@ -64,7 +64,7 @@
   <label for="film-available">
     <span>In library?</span>
       <!-- checked="true" to preselect -->
-    <input id="film-available" type="checkbox" name="available" value="1">
+    <input id="film-available" checked type="checkbox" name="available" value="1">
   </label>
   </div>
 
@@ -75,7 +75,7 @@
     <select id="film-country" name="country">
       <!-- selected="true" to preselect -->
       <option value="">Please select a country</option>
-      <option value="CA">Canada</option>
+      <option selected value="CA">Canada</option>
       <option value="US">United States</option>
       <option value="GB">United Kingdom</option>
       <option value="JP">Japan</option>

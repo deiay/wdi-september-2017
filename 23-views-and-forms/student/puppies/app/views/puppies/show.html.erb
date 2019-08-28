@@ -1,0 +1,5 @@
+<!-- render certain file -->
+
+<%= render 'one_puppy', { puppy: @puppy, link_title: false }%>
+<%= link_to( 'Edit', edit_puppy_path(@puppy.id)) %>
+<%= link_to( 'Edit', _puppy_path(@puppy.id)) %>

@@ -10,6 +10,12 @@ get '/films' do
   "GET request: #{params}"
 end
 
+get '/films/:id' do
+  @film = Film.find(params[:id].to_i)
+
+  erb :film
+end
+
 post '/films' do
   form_title = params[:title]
   form_description = params[:description]
@@ -21,6 +27,7 @@ post '/films' do
                rating: form_rating, country: form_country,
                available: form_available })
   redirect to('/')
+  #{}"POST request: #{params}"= 
 end
 
 put '/films' do
