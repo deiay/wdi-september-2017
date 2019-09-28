@@ -4,7 +4,7 @@ require_relative '../contact'
 class TestContact < Minitest::Test
 
   def setup
-    @contact = Contact.create('Grace Hopper', 'grace@hopper.com')
+    @contact = Contact.create('Grace', 'Hopper', 'grace@hopper.com')
   end
 
   def teardown
@@ -33,8 +33,8 @@ class TestContact < Minitest::Test
   end
 
   def test_update
-    @contact.update('full_name', 'Mike')
-    assert_equal 'Mike', @contact.full_name
+    @contact.update('first_name', 'Mike')
+    assert_equal 'Mike', @contact.first_name
   end
 
   def test_delete
