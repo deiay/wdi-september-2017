@@ -16,6 +16,7 @@ categories = [
   "Steak"
 ]
 
+
 categories.each do |name|
   Category.create(:name => name)
 end
@@ -30,3 +31,9 @@ Restaurant.create!([
   {name: "Burrito Boyz", address: "218 Adelaide St W, Toronto, ON, Canada", phone: "", picture: nil, description: "Awesome burritos", category_id: nil, capacity: 100, opening_hour: 10, closing_hour: 23},
   {name: "El Caballito", address: "220 King St W, Toronto ON", phone: "123 456 7890", picture: nil, description: "Yummy tequila!", category_id: nil, capacity: 100, opening_hour: 10, closing_hour: 23}
 ])
+
+Reservation.create!([
+  {begin_time: Time.now, restaurant_id: 1, user_id: 1, people: 50},
+  {begin_time: Time.now, restaurant_id: 1, user_id: 1, people: 50},
+  {begin_time: Time.now, restaurant_id: 1, user_id: 1, people: 50}
+  ])
