@@ -1,24 +1,33 @@
+# frozen_string_literal: true
+
+# Documentation
 class MonstersController < ApplicationController
   def index
-    @monsters = Monster.all
+    @monsters = monsters
 
     respond_to do |format|
       format.html
       format.text
       format.json do
-        json_data = @monsters.map {|monster|
-          {id: monster.id,
-           name: monster.name,
-           creepiness: monster.creepiness,
-           home: monster.home}
-        }
-
-        render json: {monsters: json_data, 
+        render json: {monsters: monsters_json,
                       time: Time.now,
-                      count: @monsters.count}
+                      count: monsters.count}
       end
     end
   end
 end
 
+private
 
+def monsters
+  Monster.all
+end
+
+def monsters_json
+  monsters.map {|monster|
+    {id: monster.id,
+     name: monster.name,
+     creepiness: monster.creepiness,
+     home: monster.home}
+  }
+end
