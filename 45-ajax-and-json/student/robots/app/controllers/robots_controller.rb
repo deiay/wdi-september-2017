@@ -9,9 +9,20 @@ class RobotsController < ApplicationController
   def show
     # We don't need to load the robot here, it's done in the load_robot method
     # @robot = Robot.find(params[:id])
+    #if request.xhr?
+    #  render layout: false
+    #end
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @robot, except: %i(created_at updated_at)
+      end
+    end
   end
 
   private
+
   # load_robot and robot_params are  in the private section because they aren't
   # public actions that can be called by clients of our app,  they only serve as
   # helpers to the public actions
